@@ -1,0 +1,32 @@
+AI CYBERGUARD - ОТЧЕТ О СЕТЕВОМ ТРАФИКЕ
+Сгенерировано: 2025-09-04 23:36:41
+============================================================
+
+Размер датасета: (10000, 18)
+Период данных: 2025-08-26 19:55:15.753234 - 2025-08-27 19:55:03.753234
+
+РАСПРЕДЕЛЕНИЕ МЕТОК:
+label
+Normal        9500
+Malware        119
+WebAttack      111
+PortScan       100
+DDoS            86
+BruteForce      84
+Name: count, dtype: int64
+
+РАСПРЕДЕЛЕНИЕ ПРОТОКОЛОВ:
+protocol_name
+TCP     6928
+UDP     2051
+ICMP    1021
+Name: count, dtype: int64
+
+ОБНАРУЖЕННЫЕ АТАКИ:
+label
+Malware       119
+WebAttack     111
+PortScan      100
+DDoS           86
+BruteForce     84
+Name: count, dtype: int64
