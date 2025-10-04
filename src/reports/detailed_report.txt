@@ -1,0 +1,40 @@
+AI CYBERGUARD - ОТЧЕТ О СРАВНЕНИИ МОДЕЛЕЙ
+==================================================
+Дата создания: 2025-10-04 17:38:00
+
+Random Forest:
+  Время обучения: 2.36 сек
+  Accuracy: 0.9513
+  Precision: 0.9358
+  Recall: 0.7314
+  F1-Score: 0.8211
+
+  Отчет классификации:
+              precision    recall  f1-score   support
+
+           0       0.95      0.99      0.97      2542
+           1       0.94      0.73      0.82       458
+
+    accuracy                           0.95      3000
+   macro avg       0.94      0.86      0.90      3000
+weighted avg       0.95      0.95      0.95      3000
+
+
+Neural Network:
+  Время обучения: 18.85 сек
+  Accuracy: 0.9917
+  Precision: 0.9865
+  Recall: 0.9585
+  F1-Score: 0.9723
+
+  Отчет классификации:
+              precision    recall  f1-score   support
+
+           0       0.99      1.00      1.00      2542
+           1       0.99      0.96      0.97       458
+
+    accuracy                           0.99      3000
+   macro avg       0.99      0.98      0.98      3000
+weighted avg       0.99      0.99      0.99      3000
+
+
