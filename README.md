@@ -336,13 +336,13 @@ TensorFlow Keras Guide
 
 👤 Author
 
-\[Your Name]
+\[Nurmukhammed]
 
 
 
-GitHub: @yourusername
+GitHub: @Nurmuhammedcoder
 
-Email: your.email@example.com
+Email: nekulov@internet.ru
 
 
 
