@@ -1,364 +1,206 @@
-markdown# 🛡️ AI CyberGuard - ML-Based Network Intrusion Detection System
-
-
+# 🛡️ AI CyberGuard - ML-Based Network Intrusion Detection System
 
 An educational machine learning project demonstrating cybersecurity threat detection using ensemble methods.
 
-
-
-\## 📊 Current Performance
-
-
+## 📊 Current Performance
 
 | Model | Accuracy | Precision | Recall | F1-Score |
-
 |-------|----------|-----------|--------|----------|
-
 | Random Forest | 95.1% | 93.6% | 73.1% | 82.1% |
-
 | Neural Network | 99.2% | 98.7% | 95.9% | 97.2% |
 
+*Results on synthetic dataset (15,000 samples)*
 
+## 🎯 Features
 
-\*Results on synthetic dataset (15,000 samples)\*
+- **Dual ML Architecture**: Random Forest + Deep Neural Network
+- **Interactive Dashboard**: Real-time visualization with Streamlit
+- **Automated Training**: Complete pipeline from data to deployment
+- **Model Comparison**: Side-by-side performance analysis
+- **Export Capabilities**: Save trained models and reports
 
+## 🛠️ Technical Stack
 
+- **Python 3.10**
+- **TensorFlow 2.13** - Neural network implementation
+- **Scikit-learn 1.3** - Traditional ML models
+- **Streamlit 1.28** - Web interface
+- **Pandas/NumPy** - Data processing
 
-\## 🎯 Features
-
-
-
-\- \*\*Dual ML Architecture\*\*: Random Forest + Deep Neural Network
-
-\- \*\*Interactive Dashboard\*\*: Real-time visualization with Streamlit
-
-\- \*\*Automated Training\*\*: Complete pipeline from data to deployment
-
-\- \*\*Model Comparison\*\*: Side-by-side performance analysis
-
-\- \*\*Export Capabilities\*\*: Save trained models and reports
-
-
-
-\## 🛠️ Technical Stack
-
-
-
-\- \*\*Python 3.10\*\*
-
-\- \*\*TensorFlow 2.13\*\* - Neural network implementation
-
-\- \*\*Scikit-learn 1.3\*\* - Traditional ML models
-
-\- \*\*Streamlit 1.28\*\* - Web interface
-
-\- \*\*Pandas/NumPy\*\* - Data processing
-
-
-
-\## 📁 Project Structure
-
-AI\_CyberGuard/
-
+## 📁 Project Structure
+```
+AI_CyberGuard/
 ├── dashboard.py              # Main Streamlit application
-
 ├── src/
-
-│   ├── train\_model.py       # Model training pipeline
-
-│   ├── data\_generator.py    # Synthetic data generation
-
-│   └── analyzer.py          # Data analysis utilities
-
+│   ├── train_model.py        # Model training pipeline
+│   ├── data_generator.py     # Synthetic data generation
+│   └── analyzer.py           # Data analysis utilities
 ├── models/                   # Trained model files
-
-│   ├── random\_forest.pkl
-
-│   ├── neural\_network.h5
-
+│   ├── random_forest.pkl
+│   ├── neural_network.h5
 │   └── scaler.pkl
-
 ├── images/                   # Visualizations and charts
-
 ├── reports/                  # Generated reports
-
 ├── data/                     # Dataset storage
-
 └── notebooks/                # Jupyter notebooks for analysis
+```
 
+## 🚀 Installation
 
+### Prerequisites
 
-\## 🚀 Installation
+- Python 3.10 or higher
+- pip package manager
+- 4GB+ RAM recommended
 
+### Setup
 
-
-\### Prerequisites
-
-
-
-\- Python 3.10 or higher
-
-\- pip package manager
-
-\- 4GB+ RAM recommended
-
-
-
-\### Setup
-
-
-
-1\. \*\*Clone the repository\*\*
-
+1. **Clone the repository**
 ```bash
+git clone https://github.com/Nurmuhammedcoder/AI_CyberGuard.git
+cd AI_CyberGuard
+```
 
-git clone https://github.com/yourusername/AI\_CyberGuard.git
+2. **Create virtual environment**
+```bash
+python -m venv my_cyber_env
 
-cd AI\_CyberGuard
+# Windows
+my_cyber_env\Scripts\activate
 
+# Linux/macOS
+source my_cyber_env/bin/activate
+```
 
+3. **Install dependencies**
+```bash
+pip install -r requirements.txt
+```
 
-Create virtual environment
+## 💻 Usage
 
+### Running the Dashboard
+```bash
+streamlit run dashboard.py
+```
 
+Open browser to `http://localhost:8501`
 
-bashpython -m venv my\_cyber\_env
-
-
-
-\# Windows
-
-my\_cyber\_env\\Scripts\\activate
-
-
-
-\# Linux/macOS
-
-source my\_cyber\_env/bin/activate
-
-
-
-Install dependencies
-
-
-
-bashpip install -r requirements.txt
-
-💻 Usage
-
-Running the Dashboard
-
-bashstreamlit run dashboard.py
-
-Open browser to http://localhost:8501
-
-Training Models
-
-bashcd src
-
-python train\_model.py
+### Training Models
+```bash
+cd src
+python train_model.py
+```
 
 This will:
+- Generate synthetic training data
+- Train both Random Forest and Neural Network models
+- Create visualizations
+- Save models to `models/` directory
+- Generate performance reports
 
+### Dashboard Features
 
+- **Home** - System overview and status
+- **Train Models** - Interactive model training interface
+- **Detect Attacks** - Real-time threat analysis
+- **Dashboard** - Performance metrics and visualizations
 
-Generate synthetic training data
+## 📈 Model Details
 
-Train both Random Forest and Neural Network models
+### Random Forest Classifier
 
-Create visualizations
+- 200 decision trees
+- Balanced class weights
+- Max depth: 15
+- Training time: ~2.4 seconds
 
-Save models to models/ directory
+### Neural Network
 
-Generate performance reports
+- Architecture: 128→64→32→16→1 neurons
+- Activation: ReLU + Sigmoid output
+- Optimizer: Adam (lr=0.001)
+- Regularization: Dropout + BatchNormalization
+- Training time: ~19 seconds
 
-
-
-Dashboard Features
-
-
-
-Home - System overview and status
-
-Train Models - Interactive model training interface
-
-Detect Attacks - Real-time threat analysis
-
-Dashboard - Performance metrics and visualizations
-
-
-
-📈 Model Details
-
-Random Forest Classifier
-
-
-
-200 decision trees
-
-Balanced class weights
-
-Max depth: 15
-
-Training time: ~2.4 seconds
-
-
-
-Neural Network
-
-
-
-Architecture: 128→64→32→16→1 neurons
-
-Activation: ReLU + Sigmoid output
-
-Optimizer: Adam (lr=0.001)
-
-Regularization: Dropout + BatchNormalization
-
-Training time: ~19 seconds
-
-
-
-🎓 Educational Purpose
+## 🎓 Educational Purpose
 
 This project is designed for learning and demonstration purposes. It uses synthetic data to simulate network traffic patterns and attack behaviors.
 
-Current Limitations
+### Current Limitations
 
+- **Synthetic Data**: Uses generated data, not real network captures
+- **Simplified Features**: 30 numerical features vs. complex real-world scenarios
+- **Binary Classification**: Normal vs. Attack (real systems need multi-class)
+- **No Real-time Processing**: Batch processing only
+- **Educational Scope**: Not production-ready
 
+## 🗺️ Development Roadmap
 
-Synthetic Data: Uses generated data, not real network captures
+### Phase 1 (Completed)
+- ✅ Basic ML models implementation
+- ✅ Streamlit dashboard
+- ✅ Model training pipeline
+- ✅ Visualization system
 
-Simplified Features: 30 numerical features vs. complex real-world scenarios
+### Phase 2 (In Progress)
+- 🔄 CICIDS2017 dataset integration
+- 🔄 Multi-class attack classification
+- 🔄 Statistical validation framework
+- 🔄 Jupyter notebook tutorials
 
-Binary Classification: Normal vs. Attack (real systems need multi-class)
+### Phase 3 (Planned)
+- 📋 Real-time PCAP file processing
+- 📋 REST API for model inference
+- 📋 Docker containerization
+- 📋 Comparative analysis with existing IDS
 
-No Real-time Processing: Batch processing only
-
-Educational Scope: Not production-ready
-
-
-
-🗺️ Development Roadmap
-
-Phase 1 (Completed)
-
-
-
-&nbsp;Basic ML models implementation
-
-&nbsp;Streamlit dashboard
-
-&nbsp;Model training pipeline
-
-&nbsp;Visualization system
-
-
-
-Phase 2 (In Progress)
-
-
-
-&nbsp;CICIDS2017 dataset integration
-
-&nbsp;Multi-class attack classification
-
-&nbsp;Statistical validation framework
-
-&nbsp;Jupyter notebook tutorials
-
-
-
-Phase 3 (Planned)
-
-
-
-&nbsp;Real-time PCAP file processing
-
-&nbsp;REST API for model inference
-
-&nbsp;Docker containerization
-
-&nbsp;Comparative analysis with existing IDS
-
-
-
-📊 Performance Visualizations
+## 📊 Performance Visualizations
 
 The project generates several visualizations:
 
+- Confusion matrices
+- Training history plots
+- Feature importance charts
+- Model comparison graphs
 
+All saved to `images/` directory.
 
-Confusion matrices
-
-Training history plots
-
-Feature importance charts
-
-Model comparison graphs
-
-
-
-All saved to images/ directory.
-
-🤝 Contributing
+## 🤝 Contributing
 
 This is an educational project. Suggestions and improvements are welcome!
 
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
 
-
-Fork the repository
-
-Create a feature branch
-
-Make your changes
-
-Submit a pull request
-
-
-
-📝 License
+## 📝 License
 
 MIT License - see LICENSE file for details
 
-🔗 Resources
+## 🔗 Resources
 
+- [CICIDS2017 Dataset](https://www.unb.ca/cic/datasets/ids-2017.html)
+- [Scikit-learn Documentation](https://scikit-learn.org/)
+- [TensorFlow Keras Guide](https://www.tensorflow.org/guide/keras)
 
+## 👤 Author
 
-CICIDS2017 Dataset
+**Nurmukhammed**
 
-Scikit-learn Documentation
+- GitHub: [@Nurmuhammedcoder](https://github.com/Nurmuhammedcoder)
+- Email: nekulov@internet.ru
 
-TensorFlow Keras Guide
+## 🙏 Acknowledgments
 
+- Dataset inspiration: Canadian Institute for Cybersecurity
+- ML frameworks: TensorFlow and Scikit-learn teams
+- Streamlit for excellent visualization tools
 
+---
 
-👤 Author
+⭐ **If you find this project useful, please consider giving it a star!**
 
-\[Nurmukhammed]
-
-
-
-GitHub: @Nurmuhammedcoder
-
-Email: nekulov@internet.ru
-
-
-
-🙏 Acknowledgments
-
-
-
-Dataset inspiration: Canadian Institute for Cybersecurity
-
-ML frameworks: TensorFlow and Scikit-learn teams
-
-Streamlit for excellent visualization tools
-
-
-
-
-
-⚠️ Disclaimer: This is an educational project. Not intended for production cybersecurity applications.
-
+⚠️ **Disclaimer**: This is an educational project. Not intended for production cybersecurity applications.
+```
