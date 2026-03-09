@@ -189,7 +189,7 @@ MIT License - see LICENSE file for details
 
 **Nurmukhammed**
 
-- GitHub: [@Nurmuhammedcoder](https://github.com/Nurmuhammedcoder)
+- GitHub: [@Nurmukhammedcoder](https://github.com/Nurmukhammedcoder)
 - Email: nekulov@internet.ru
 
 ## 🙏 Acknowledgments
